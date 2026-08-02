@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-
+import ThemeToggle from "./ui/ThemeToggle";
 
 export default function Navbar() {
 
@@ -99,10 +99,13 @@ export default function Navbar() {
             Profile
           </Link>
 
+          <ThemeToggle />
+
 
           <button
 
             onClick={handleLogout}
+        
 
             className="
               rounded-lg
@@ -170,21 +173,20 @@ export default function Navbar() {
 
 
 
-            <button
+           <ThemeToggle />
 
-              onClick={handleLogout}
-
-              className="
-                rounded-lg
-                bg-red-500
-                px-4
-                py-2
-                font-semibold
-              "
-
-            >
-              Logout
-            </button>
+<button
+  onClick={handleLogout}
+  className="
+    rounded-lg
+    bg-red-500
+    px-4
+    py-2
+    font-semibold
+  "
+>
+  Logout
+</button>
 
 
           </nav>
